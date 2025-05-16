@@ -6,6 +6,22 @@ class Program
     static void Main(string[] args)
     {
         string letter = "";
+        string specifyLetter(int)
+        {
+            string specificLetter = "";
+            if (grade ends >= 7)
+            {
+                return(letter + "+");
+            }
+            else if (grade ends <= 2)
+            {
+                return letter + "-");
+            }
+            else ()
+            {
+                return letter;
+            }
+        }
         
         Console.Write("What is your grade percentage? ");
         string userInput = Console.ReadLine();
