@@ -1,3 +1,7 @@
+/*For the Stretch Challenge I added "+" and "-" as part of the grades I also
+deleted the problems with about A+ over 93 and F- on less than 60
+*/
+
 using System;
 using System.Runtime.CompilerServices;
 
@@ -5,28 +9,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        string letter = "";
-        string specifyLetter(int)
-        {
-            string specificLetter = "";
-            if (grade ends >= 7)
-            {
-                return(letter + "+");
-            }
-            else if (grade ends <= 2)
-            {
-                return letter + "-");
-            }
-            else ()
-            {
-                return letter;
-            }
-        }
-        
         Console.Write("What is your grade percentage? ");
         string userInput = Console.ReadLine();
         int grade = int.Parse(userInput);
-        
+        string letter;
         if (grade >= 90)
         {
             letter = "A";
@@ -43,9 +29,27 @@ class Program
         {
             letter = "D";
         }
-        else 
+        else
         {
             letter = "F";
+        }
+
+        if (letter != "F")
+        {
+            int lastDigit = grade % 10;
+
+            if (grade >= 93)
+            {
+                letter += "";
+            }
+            else if (lastDigit >= 7 && lastDigit <= 9)
+            {
+                letter += "+";
+            }
+            else if (lastDigit <= 2)
+            {
+                letter += "-";
+            }
         }
 
         Console.WriteLine($"Your grade is: {letter}");
