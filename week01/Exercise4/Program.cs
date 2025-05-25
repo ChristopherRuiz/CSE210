@@ -35,16 +35,15 @@ class Program
         Console.WriteLine($"The average is: {average}");
 
         // Part 3: Find the maximum number
-        int max = numbers[0];
+        int largest = numbers[0];
 
         foreach (int number in numbers)
         {
-            if (number > max)
+            if (number > largest)
             {
-                max = number;
+                largest = number;
             }
         }
-
-        Console.WriteLine($"The largest number is: {max}");
+        Console.WriteLine($"The largest number is: {largest}");
     }
 }
